@@ -1,0 +1,736 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* padding: 10px; */
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+/* headBar */
+.top-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 0px 5px 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.logo svg {
+    width: 100px;
+    height: 42px;
+    margin-right: 10px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f1f1f2;
+    border-radius: 92px;
+    padding: 12px 16px;
+    width: 300px;
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.search-button svg {
+    width: 20px;
+    height: 20px;
+    color: #a1a2a7;
+}
+
+.right-section {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .hide{
+        display: none;
+    }
+    .login-button{
+        font-size: 12px !important;
+    }
+}
+
+.upload-button {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #cbcbcd;
+    border-radius: 4px;
+    padding: 8px 10px 8px 5px;
+    font-size: 16px;
+    min-width: 80px;
+    /* font-weight: bold; */
+    display: flex;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.login-button {
+    background-color: #fe2c55;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 16px;
+    font-size: 16px;
+    min-width: 85px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 16px;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+}
+
+.menu-button span {
+    width: 4px;
+    height: 4px;
+    background-color: #161823;
+    border-radius: 50%;
+}
+
+/* 语言选择弹窗 */
+.modal-language {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    width: 300px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    text-align: center;
+}
+
+.modal-content-language {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#language-list {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+#language-list li {
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.3s;
+    text-align: center;
+}
+
+#language-list li:last-child {
+    border-bottom: none;
+}
+
+#language-list li:hover {
+    background: #ddd;
+}
+
+#close-modal {
+    margin-top: 15px;
+    padding: 8px 20px;
+    background: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* headBar end */
+
+.container {
+    width: 100%;
+    min-height: calc(100vh + 400px);
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px 15px;
+    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
+    
+}
+
+.name-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.name-box h2 {
+    margin: 10px 0;
+}
+
+.inputName {
+    width: 40%;
+    min-width: 200px;
+    /* border: 1px solid #ddd; */
+    background-color: #f1f1f2;
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.inputName input {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    font-size: 16px;
+    outline: none;
+    padding-right: 30px;
+    /* 为清除按钮预留空间 */
+}
+
+/* 清除图标的样式 */
+.clear-icon {
+    position: absolute;
+    top: 55%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    display: none;
+    /* 初始不显示图标 */
+}
+
+.icon {
+    width: 20px;
+    height: 15px;
+    color: #888;
+}
+
+.clear-icon:hover .icon {
+    color: #000;
+}
+
+.recharge {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.divider {
+    height: 1px;
+    background-color: #ddd;
+    margin: 0 0 10px 0;
+}
+
+.tips {
+    font-size: 12px;
+    color: #fe2c55;
+    margin-bottom: 15px;
+}
+
+.header {
+    padding: 10px 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.header h4 {
+    font-size: 18px;
+    margin: 10px auto;
+}
+
+.coin-options {
+    min-height: 35vh;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.coin-option {
+    font-size: 20px;
+    border: 1px solid #ddd;
+    /* background-color: #f1f1f2; */
+    border-radius: 2px;
+    padding: 10px;
+    min-height: 8vh;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.price {
+    font-size: 12px;
+    color: rgba(0, 0, 0, .56);
+}
+
+.centerCus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.coin-option.active {
+    border: 1px solid #f2bf1a;
+}
+
+.payBox {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.payBox img {
+    margin-left: 3px;
+    width: 30px;
+}
+
+.cashback {
+    background-color: #e8f5e9;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: white;
+    /* border-top: 1px solid #ddd; */
+    padding: 10px;
+    text-align: center;
+    /* box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+.left {
+    /* margin-top: 5px; */
+    margin-bottom: 10px;
+    float: left;
+    margin-left: 10px;
+    color: rgba(0, 0, 0, .56);
+}
+
+.right {
+    /* margin-top: 5px; */
+    margin-bottom: 10px;
+    float: right;
+    margin-right: 10px;
+    color: rgba(0, 0, 0, .56);
+}
+
+
+.buy-button {
+    background-color: #fe2c55;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 15px;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+#pop {
+    width: 100vw;
+    height: calc(100vh + 600px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 1;
+}
+
+.show-box {
+    width: 100%;
+    height: 500px;
+    background-color: #fff;
+    position: fixed;
+    border-radius: 20px 20px 0 0;
+    bottom: 0;
+    bottom: -500px;
+    z-index: 2;
+    padding: 0 0.32rem;
+    box-sizing: border-box;
+}
+
+/* @media (max-height: 800px) {
+    .show-box{
+        height: 70vh;
+        bottom: -70vh;
+    }
+} */
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* 输入金额 */
+.showcontainer {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px 20px 0 0;
+}
+
+.showheader {
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+h1 {
+    margin: 0;
+    font-size: 18px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+main {
+    /* flex-grow: 1; */
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.input-container {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+}
+
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+.coin-icon {
+    margin-right: 10px;
+}
+
+#coinInput {
+    border: none;
+    font-size: 16px;
+    flex-grow: 1;
+}
+
+.keypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.key {
+    padding: 15px;
+    font-size: 18px;
+    background-color: #f8f8f8;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.backspace svg {
+    width: 20px;
+    height: 20px;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    margin-top: 10px;
+    padding: 10px 0;
+    font-weight: bold;
+    border-top: 1px solid #e0e0e0;
+}
+
+
+#rechargeButton {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    background-color: #ccc;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rechargeButton svg {
+    margin-right: 10px;
+}
+
+#rechargeButton:not(:disabled) {
+    background-color: #fe2c55;
+}
+
+
+/* 充值加载中 */
+
+.load-box {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    background-color: #ffffff;
+    width: 100vw;
+    box-sizing: border-box;
+    position: fixed;
+    top: 10vh;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.load-iframe {
+    width: 40px;
+    height: 40px;
+}
+
+.load-text {
+    background-color: rgb(225, 236, 72);
+    width: 85vw;
+    min-height: 30vh;
+    border-radius: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+
+/* 充值成功 */
+
+.success-box {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;
+    position: fixed;
+    top: 10vh;
+    border-radius: 20px;
+    z-index: 2;
+}
+
+.success-text {
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    width: 90vw;
+    min-height: 45vh;
+    border-radius: 20px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.suc-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    /* background-color: rgba(204,
+            228,
+            67, 0.5); */
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.suc-circle img {
+    width: 100%;
+    height: 100%;
+}
+
+.backBtn {
+    width: 40vw;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #fe2c55;
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 6px 0;
+}
+
+
+
+/* 加载中2 */
+.load-box-2 {
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    padding: 0.4rem 0.32rem;
+    border-radius: 20px;
+    color: #aaa;
+    background-color: #fff;
+    display: none;
+    /* 初始隐藏 */
+    position: fixed;
+    z-index: 1000;
+    /* 确保在最上层 */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.load-left {
+    float: left;
+}
+
+.load-right {
+    float: right;
+}
+
+.showheader {
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: #000;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.back-button svg {
+    margin-right: 5px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: 0 20px; */
+    width: 100vw;
+    background-color: #ffffff;
+    border-radius: 20px 20px 0 0;
+    height: 60vh;
+    position: fixed;
+    bottom: 0;
+    box-sizing: border-box;
+}
+
+#ConfirmButton {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    color: white;
+    background-color: #fe2c55;
+    border: none;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#ConfirmButton svg {
+    margin-right: 10px;
+}

