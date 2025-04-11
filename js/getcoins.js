@@ -25,7 +25,7 @@ coinOptions.forEach(option => {
             coinOptions.forEach(opt => opt.classList.remove('active'));
             this.classList.add('active');
             const price = this.dataset.price;
-            buyButton.textContent = `SAR$ ${price}`;
+            // buyButton.textContent = `SAR$ ${price}`;
         }
     });
 });
@@ -96,6 +96,13 @@ function hidePop() {
     $('#language-modal').css('display', 'none');
 }
 
+function clearInput() {
+    $('#pop').css('display', 'none');
+    $('.success-box').css('display', 'none');
+    inputField.value = '';
+}
+
+
 
 // 输入金额
 
@@ -104,6 +111,36 @@ const totalAmount = document.getElementById('totalAmount');
 const rechargeButton = document.getElementById('rechargeButton');
 const keys = document.querySelectorAll('.key');
 const ConfirmButton = document.getElementById('ConfirmButton');
+const buyButton = document.getElementById('buyButton');
+
+buyButton.addEventListener('click', function () {
+    let activeOption = document.querySelector('.coin-option.active');
+    let coins = activeOption.getAttribute('data-coins');
+    let price = activeOption.getAttribute('data-price');
+    let username = document.querySelector('#userName');
+    let coinsNum = document.querySelector('#coinsNum');
+
+    $('#pop').css('display', 'block');
+    $('.load-box').css({
+        'display': 'flex'
+    });
+    // 启动倒计时
+    startCountdown();
+    setTimeout(function () {
+        $('.load-box').css({
+            'display': 'none'
+        });
+        coinsNum.textContent = coins;
+        username.textContent = inputField.value;
+
+        $('.success-box').css('display', 'flex');
+
+        setTimeout(() => {
+            coinInput.value = '';
+        }, 10);
+    }, 3000);
+    
+});
 
 function updateInput() {
     let value = coinInput.value.replace(/,/g, '');
@@ -195,24 +232,24 @@ rechargeButton.addEventListener('click', function () {
             'bottom': '-500px',
             'transition': 'all .1s ease-in'
         });
-        $('.load-box-2').css({
-            'display': 'block'
+        $('.load-box').css({
+            'display': 'flex'
         });
-        //启动倒计时
-        // startCountdown();
-        // setTimeout(function () {
-        //     $('.load-box').css({
-        //         'display': 'none'
-        //     });
-        //     coinsNum.textContent = coinInput.value;
-        //     username.textContent = inputField.value;
+        // 启动倒计时
+        startCountdown();
+        setTimeout(function () {
+            $('.load-box').css({
+                'display': 'none'
+            });
+            coinsNum.textContent = coinInput.value;
+            username.textContent = inputField.value;
 
-        //     $('.success-box').css('display', 'flex');
+            $('.success-box').css('display', 'flex');
 
-        //     setTimeout(() => {
-        //         coinInput.value = '';
-        //     }, 10);
-        // }, 3000);
+            setTimeout(() => {
+                coinInput.value = '';
+            }, 10);
+        }, 3000);
     }
 });
 

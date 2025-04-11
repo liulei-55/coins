@@ -14,7 +14,7 @@
 
 <body>
 
-    <header class="top-bar">
+    <!-- <header class="top-bar">
         <div class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 118 42" width="118" height="42"
                 alt="TikTok">
@@ -73,7 +73,6 @@
                 <span></span>
             </button>
 
-            <!-- 语言选择弹窗 -->
             <div id="language-modal" class="modal-language">
                 <div class="modal-content-language">
                     <h3 data-i18n="choose_language">Choose Language</h3>
@@ -82,29 +81,46 @@
                 </div>
             </div>
         </div>
-    </header>
+    </header> -->
 
     <div class="container">
 
         <div class="name-box">
             <h2 class="name" data-i18n="get_coins">Get Coins</h2>
-            <div style="cursor: pointer;" data-i18n="view_transaction">view transaction history</div>
+            <button class="menu-button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div id="language-modal" class="modal-language">
+                <div class="modal-content-language">
+                    <h3 data-i18n="choose_language">Choose Language</h3>
+                    <ul id="language-list"></ul>
+                    <button id="close-modal" data-i18n="close">Close</button>
+                </div>
+            </div>
+            <!-- <div style="cursor: pointer;" data-i18n="view_transaction">view transaction history</div> -->
         </div>
-        <div class="inputName">
-            <input type="text" id="inputField" placeholder="" data-i18n-placeholder="enter_username">
-            <span id="clearButton" class="clear-icon">
-                <!-- SVG × 图标 -->
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
-                    class="icon">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg> -->
-                <svg t="1729390778379" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                    xmlns="http://www.w3.org/2000/svg" p-id="3470" width="15" height="15">
-                    <path
-                        d="M519.656727 472.459636l-160.512-160.488727a36.584727 36.584727 0 1 0-51.712 51.712l160.488728 160.512-160.488728 160.512a36.584727 36.584727 0 1 0 51.712 51.712l160.512-160.512 160.488728 160.512a36.584727 36.584727 0 1 0 51.735272-51.712l-160.512-160.512 160.512-160.512a36.584727 36.584727 0 1 0-51.735272-51.712L519.68 472.436364zM512 1024C229.236364 1024 0 794.763636 0 512S229.236364 0 512 0s512 229.236364 512 512-229.236364 512-512 512z"
-                        fill="#888888" p-id="3471"></path>
-                </svg>
-            </span>
+        <div style="display: flex;">
+            <img src="../imgs/userIcon.png" alt="" style="width: 40px;height: 40px;">
+            <div class="inputName">
+            
+                <input type="text" id="inputField" placeholder="" data-i18n-placeholder="enter_username">
+                <span id="clearButton" class="clear-icon">
+                    <!-- SVG × 图标 -->
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+                                class="icon">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg> -->
+                    <svg t="1729390778379" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                        p-id="3470" width="15" height="15">
+                        <path
+                            d="M519.656727 472.459636l-160.512-160.488727a36.584727 36.584727 0 1 0-51.712 51.712l160.488728 160.512-160.488728 160.512a36.584727 36.584727 0 1 0 51.712 51.712l160.512-160.512 160.488728 160.512a36.584727 36.584727 0 1 0 51.735272-51.712l-160.512-160.512 160.512-160.512a36.584727 36.584727 0 1 0-51.735272-51.712L519.68 472.436364zM512 1024C229.236364 1024 0 794.763636 0 512S229.236364 0 512 0s512 229.236364 512 512-229.236364 512-512 512z"
+                            fill="#888888" p-id="3471"></path>
+                    </svg>
+                </span>
+            </div>
         </div>
 
         <div class="coinsBar">
@@ -113,7 +129,7 @@
 
         <div class="coin-options">
 
-            <div class="coin-option active" data-coins="70" data-price="119">
+            <div class="coin-option active" data-coins="9999" data-price="119">
 
                 <div>
                     <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
@@ -125,11 +141,11 @@
                             d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
                             fill="#fff"></path>
                     </svg>
-                    <strong>70</strong>
-                    <div class="price">SAR$26</div>
+                    <strong>9,999</strong>
+                    <!-- <div class="price">SAR$26</div> -->
                 </div>
             </div>
-            <div class="coin-option" data-coins="350" data-price="595">
+            <div class="coin-option" data-coins="122000" data-price="595">
 
                 <div>
                     <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
@@ -141,11 +157,11 @@
                             d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
                             fill="#fff"></path>
                     </svg>
-                    <strong>350</strong>
-                    <div class="price">SAR$129</div>
+                    <strong>122,000</strong>
+                    <!-- <div class="price">SAR$129</div> -->
                 </div>
             </div>
-            <div class="coin-option" data-coins="700" data-price="1189">
+            <div class="coin-option" data-coins="555000" data-price="1189">
                 <div>
                     <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                         width="1em" height="1em" style="transform: rotateY(180deg);">
@@ -156,11 +172,11 @@
                             d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
                             fill="#fff"></path>
                     </svg>
-                    <strong>700</strong>
-                    <div class="price">SAR$259</div>
+                    <strong>555,000</strong>
+                    <!-- <div class="price">SAR$259</div> -->
                 </div>
             </div>
-            <div class="coin-option" data-coins="1400" data-price="2375">
+            <div class="coin-option" data-coins="1222222" data-price="2375">
                 <div>
                     <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                         width="1em" height="1em" style="transform: rotateY(180deg);">
@@ -171,11 +187,11 @@
                             d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
                             fill="#fff"></path>
                     </svg>
-                    <strong>1,400</strong>
-                    <div class="price">SAR$519</div>
+                    <strong>1,222,222</strong>
+                    <!-- <div class="price">SAR$519</div> -->
                 </div>
             </div>
-            <div class="coin-option" data-coins="3500" data-price="5939">
+            <div class="coin-option" data-coins="1888888" data-price="5939">
 
                 <div>
                     <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
@@ -187,11 +203,11 @@
                             d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
                             fill="#fff"></path>
                     </svg>
-                    <strong>3,500</strong>
-                    <div class="price">SAR$1299</div>
+                    <strong>1,888,888</strong>
+                    <!-- <div class="price">SAR$1299</div> -->
                 </div>
             </div>
-            <div class="coin-option" data-coins="7000" data-price="11879">
+            <div class="coin-option" data-coins="2500000" data-price="11879">
                 <div>
                     <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
                         width="1em" height="1em" style="transform: rotateY(180deg);">
@@ -202,25 +218,11 @@
                             d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
                             fill="#fff"></path>
                     </svg>
-                    <strong>7,000</strong>
-                    <div class="price">SAR$2,595</div>
+                    <strong>2,500,000</strong>
+                    <!-- <div class="price">SAR$2,595</div> -->
                 </div>
             </div>
-            <div class="coin-option" data-coins="17500" data-price="29695">
-                <div>
-                    <svg font-size="16px" viewBox="0 0 48 48" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-                        width="1em" height="1em" style="transform: rotateY(180deg);">
-                        <circle cx="24" cy="24" r="22" fill="#FBD32C"></circle>
-                        <circle cx="24" cy="24" r="17" fill="#F9BA10"></circle>
-                        <path d="M40.93 25.5a17 17 0 1 0-33.87 0 17 17 0 0 1 33.87 0Z" fill="#F6A811"></path>
-                        <path
-                            d="M33 19a5.03 5.03 0 0 1-5.06-5h-3.38v13.61a3.07 3.07 0 0 1-3.1 3.06c-1.7 0-3.09-1.37-3.09-3.06a3.07 3.07 0 0 1 3.94-2.94v-3.4A6.43 6.43 0 0 0 15 27.6c0 3.54 2.9 6.4 6.47 6.4a6.43 6.43 0 0 0 6.47-6.39v-6.94A8.47 8.47 0 0 0 33 22.33V19Z"
-                            fill="#fff"></path>
-                    </svg>
-                    <strong>17,500</strong>
-                    <div class="price">SAR$6,489</div>
-                </div>
-            </div>
+
             <div class="coin-option" id="custom-option" onclick="showPop()">
 
                 <div>
@@ -255,7 +257,7 @@
     <div class="footer">
         <!-- <div class="left" data-i18n="total">Total</div>
         <div class="right" id="buyButton">SAR$ 26</div> -->
-        <button class="buy-button" data-i18n="recharge">Recharge</button>
+        <button class="buy-button" data-i18n="recharge" id="buyButton">Recharge</button>
     </div>
 
 
@@ -433,7 +435,7 @@
                     to</span> <span id="userName">user</span>, <span data-i18n="send_gifts">and you can use the coins to
                     send virtual gifts, 24hr-arrival</span>
             </p>
-            <button class="backBtn" onclick="hidePop()" data-i18n="go_back">Go back</button>
+            <button class="backBtn" data-i18n="go_back" onclick="clearInput()">Go back</button>
         </div>
     </div>
 
