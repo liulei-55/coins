@@ -5,6 +5,7 @@ loginForm.addEventListener('submit', function (e) {
     const password = document.getElementById('password').value;
     const version = document.querySelector('input[name="option"]:checked').value;
 
+    alert(version)
     if (password === '131419') {
         if (version === 'version1' || version === null) {
             window.location.href = './pages/getcoins.html';
