@@ -302,46 +302,60 @@ updateInput();
 
 
 //语言选择
-function changeLanguage(lang) {
-    if (!translations[lang]) return;
+// function changeLanguage(lang) {
+//     if (!translations[lang]) return;
 
-    document.querySelectorAll("[data-i18n]").forEach(element => {
-        const key = element.getAttribute("data-i18n");
-        element.textContent = translations[lang][key] || element.textContent;
+//     document.querySelectorAll("[data-i18n]").forEach(element => {
+//         const key = element.getAttribute("data-i18n");
+//         element.textContent = translations[lang][key] || element.textContent;
+//     });
+
+//     document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
+//         const key = element.getAttribute("data-i18n-placeholder");
+//         element.setAttribute("placeholder", translations[lang][key]);
+//     });
+
+//     localStorage.setItem("selectedLanguage", lang);
+// }
+
+// const savedLang = localStorage.getItem("selectedLanguage") || "en";
+// changeLanguage(savedLang);
+
+// const modal = document.getElementById("language-modal");
+// const languageList = document.getElementById("language-list");
+
+// document.querySelector(".menu-button").addEventListener("click", function () {
+//     $('#pop').css('display', 'block');
+//     modal.style.display = "block";
+//     languageList.innerHTML = "";
+
+//     Object.keys(languageNames).forEach(lang => {
+//         const li = document.createElement("li");
+//         li.textContent = languageNames[lang]; // 始终显示英语
+//         li.addEventListener("click", () => {
+//             changeLanguage(lang);
+//             modal.style.display = "none";
+//             $('#pop').css('display', 'none');
+//         });
+//         languageList.appendChild(li);
+//     });
+// });
+
+// document.getElementById("close-modal").addEventListener("click", function () {
+//     modal.style.display = "none";
+//     $('#pop').css('display', 'none');
+// });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const headName = document.getElementById('headName');
+    const savedHeadName = localStorage.getItem('headName');
+
+    if (savedHeadName !== null) {
+        headName.value = savedHeadName;
+    }
+
+    // 使用 input 事件实时监听
+    headName.addEventListener('input', function () {
+        localStorage.setItem('headName', headName.value);
     });
-
-    document.querySelectorAll("[data-i18n-placeholder]").forEach(element => {
-        const key = element.getAttribute("data-i18n-placeholder");
-        element.setAttribute("placeholder", translations[lang][key]);
-    });
-
-    localStorage.setItem("selectedLanguage", lang);
-}
-
-const savedLang = localStorage.getItem("selectedLanguage") || "en";
-changeLanguage(savedLang);
-
-const modal = document.getElementById("language-modal");
-const languageList = document.getElementById("language-list");
-
-document.querySelector(".menu-button").addEventListener("click", function () {
-    $('#pop').css('display', 'block');
-    modal.style.display = "block";
-    languageList.innerHTML = "";
-
-    Object.keys(languageNames).forEach(lang => {
-        const li = document.createElement("li");
-        li.textContent = languageNames[lang]; // 始终显示英语
-        li.addEventListener("click", () => {
-            changeLanguage(lang);
-            modal.style.display = "none";
-            $('#pop').css('display', 'none');
-        });
-        languageList.appendChild(li);
-    });
-});
-
-document.getElementById("close-modal").addEventListener("click", function () {
-    modal.style.display = "none";
-    $('#pop').css('display', 'none');
 });
