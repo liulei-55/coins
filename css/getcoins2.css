@@ -321,13 +321,14 @@ body {
     flex-direction: row;
     align-items: center;
     margin: 20px 0;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     padding: 10px;
     border-radius: 5px;
 }
 
 .inputName {
     min-width: 200px;
+    border-bottom: 1px solid #4a4a4a;
     border-radius: 2px;
     padding: 10px;
     font-size: 16px;
